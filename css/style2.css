@@ -42,7 +42,7 @@ header.sticky {
 header .logo {
   position: relative;
   transition: 0.6s;
-  width: 150px;
+  width: 180px;
 }
 header.sticky .logo {
   filter: invert(100%);
@@ -78,6 +78,7 @@ header ul li a {
   padding: 14px 16px;
   text-decoration: none;
   transition: 0.6s;
+  font-weight: 500;
 }
 header.sticky ul li a {
   color: #000000;
@@ -134,6 +135,10 @@ header.sticky ul li a {
   margin-bottom: 10px;
 }
 
+.mainpage-hasil {
+  text-align: center;
+}
+
 /*----------TITLE & PARAGRAPH----------*/
 
 h1 {
@@ -142,17 +147,20 @@ h1 {
 h3 {
   font-weight: 400;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 p {
   text-align: justify;
+  margin-top: 20px;
   margin-bottom: 20px;
-  margin-bottom: 20px;
+  font-size: small;
 }
 ol {
   margin-bottom: 20px;
 }
 ol li {
   margin-left: 15px;
+  font-size: small;
 }
 
 /*----------FORM INPUT----------*/
@@ -193,22 +201,53 @@ ol li {
   margin-bottom: 10px;
   cursor: pointer;
 }
+.secondarybutton:hover {
+  background-color: rgb(243, 243, 243);
+}
 
 /*----------FOOTER----------*/
 
 footer {
   position: absolute;
   width: 100%;
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
+  background-color: #37c6eb;
   left: 0;
   border: none;
-  top: 1620px;
+  top: 1545px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 @media only screen and (max-width: 480px) {
   footer {
-    top: 2150px;
+    top: 2165px;
+    padding-left: 2.5%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.footerfont {
+  color: rgb(255, 255, 255);
+  font-size:small;
+}
+@media only screen and (max-width: 480px) {
+  .footerfont {
+    font-size:small;
+  }
+}
+
+.mail {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+footer img {
+  width: 50px;
+}
+@media only screen and (max-width: 480px) {
+  footer img {
+    width: 40px;
   }
 }
