@@ -129,7 +129,7 @@ header.sticky ul li a {
 .mainpage-colsub {
   width: 100%;
   padding: 20px;
-  background-color: rgb(220, 220, 220);
+  background-color: rgb(236, 236, 236);
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -151,7 +151,6 @@ h3 {
 }
 p {
   text-align: justify;
-  margin-top: 20px;
   margin-bottom: 20px;
   font-size: small;
 }
@@ -160,6 +159,9 @@ ol {
 }
 ol li {
   margin-left: 15px;
+  font-size: small;
+}
+label {
   font-size: small;
 }
 
@@ -208,6 +210,7 @@ ol li {
 /*----------FOOTER----------*/
 
 footer {
+  display: flex;
   position: absolute;
   width: 100%;
   background-color: #37c6eb;
@@ -216,8 +219,8 @@ footer {
   top: 1545px;
   padding-left: 2.5%;
   padding-right: 2.5%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 @media only screen and (max-width: 480px) {
   footer {
@@ -250,4 +253,18 @@ footer img {
   footer img {
     width: 40px;
   }
+}
+.footer-col {
+  width: 50%;
+}
+.footer-icon {
+  width: 5%;
+}
+@media only screen and (max-width: 480px) {
+  .footer-icon {
+    width: 10%;
+  }
+}
+.footer-end {
+  text-align: end;
 }
