@@ -23,6 +23,20 @@
 
 <section class="mainsection" id="section1">
 <img class="coverimage" src="assets\miniproject cover.jpg" alt=""> <!--gambar cover-->
+<div class="covertext">
+    <h1>
+        <span class="hidden">Hidup</span>
+        <span class="hidden">sehat</span>
+        <span class="hidden">dimulai</span>
+        <span class="hidden">dengan</span><br>
+        <span class="hidden">memahami</span>
+        <span class="hidden">tubuh</span>
+        <span class="hidden">anda</span>
+    </h1>
+</div>
+</section>
+
+<section>
 <div class="mainpage">
     <div class="mainpage-col"> <!--bagian input kalkulator-->
         <h1>Kalkulator BMI</h1>
@@ -69,12 +83,17 @@
         </div>
         <p id="outputrange"></p> <!--hasil BMI diantara ...-->
         <p>Anda berada dalam kategori <b id="outputkategori">-</b>.</p> <!--status hasil penghitungan berat badan-->
-        <p id="outputsaran"></p>
+        <div class="mainpage-saran">
+            <p id="outputsaran"></p>
+        </div>
         <button class="mainbutton">Konsultasi Ahli Gizi Via Aplikasi</button>
         <button class="mainbutton">Registrasi Online Ahli Gizi</button>
         <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
         <div class="mainpage-colsub">
-            <h3>Beberapa penyakit yang berasal dari kegemukan:</h3>
+            <div class="mainpage-penyakit">
+                <p id="listpenyakit"></p>
+                <p id="outputpenyakit"></p>
+            </div>
             <button class="mainbutton">Konsultasi Dokter Via Aplikasi</button>
             <button class="mainbutton">Registrasi Online Sekarang</button>
         </div>

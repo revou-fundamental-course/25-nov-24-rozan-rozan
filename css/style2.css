@@ -87,13 +87,67 @@ header.sticky ul li a {
   color: #000000;
 }
 
-/*----------COVER IMAGE----------*/
+/*----------COVER----------*/
 
 .coverimage {
   position: relative;
   width: 100%;
   z-index: 1;
   mask-image: linear-gradient(black 90%, transparent 100%);
+}
+.covertext {
+  position: absolute;
+  z-index: 2;
+  left: 80px;
+  top: 260px;
+  color: white;
+  font-weight: 600; 
+  font-size: x-large;
+}
+@media only screen and (max-width: 480px) {
+  .covertext {
+    left: 20px;
+    top: 90px;
+    font-size:8px;
+  }
+}
+@keyframes transitionInText {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+span {
+  display: inline-block;
+  opacity: 0;
+  animation: transitionInText 1s forwards;
+}
+span:nth-child(1) {
+  animation-delay: 500ms;
+}
+span:nth-child(2) {
+  animation-delay: 500ms;
+}
+span:nth-child(3) {
+  animation-delay: 1300ms;
+}
+span:nth-child(4) {
+  animation-delay: 1400ms;
+}
+span:nth-child(5) {
+  animation-delay: 1300ms;
+}
+span:nth-child(6) {
+  animation-delay: 1400ms;
+}
+span:nth-child(7) {
+  animation-delay: 1500ms;
+}
+span:nth-child(8) {
+  animation-delay: 1600ms;
 }
 
 /*----------MAIN PAGE----------*/
@@ -141,6 +195,15 @@ header.sticky ul li a {
 .mainpage-hasil {
   text-align: center;
 }
+@media only screen and (max-width: 480px) {
+  .mainpage-saran {
+    height: 160px;
+  }
+  .mainpage-penyakit {
+    height: 120px;
+  }
+}
+
 
 /*----------TITLE & PARAGRAPH----------*/
 
@@ -228,7 +291,7 @@ footer {
 }
 @media only screen and (max-width: 480px) {
   footer {
-    top: 2165px;
+    top: 2300px;
     padding-left: 2.5%;
     padding-top: 10px;
     padding-bottom: 20px;
