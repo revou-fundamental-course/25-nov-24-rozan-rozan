@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
+    <link rel="ikon" href="assets\revou logo.pngn" type="jenis gambar/ikon">
     <link rel="stylesheet" href="css/style2.css">
     <script defer src="js/script.js"></script>
+
 </head>
 
 <body>
 
-<header>
+<header> <!--navbar-->
     <ul>
         <li><a href="index.html"><img class="logo" src="assets\revou minicourse logo.png"></a></li>
         <li style="float:right"><a href="contact.html">Contact</a></li>
@@ -20,30 +22,34 @@
 </header>
 
 <section class="mainsection" id="section1">
-<img class="coverimage" src="assets\miniproject cover.jpg" alt="">
+<img class="coverimage" src="assets\miniproject cover.jpg" alt=""> <!--gambar cover-->
 <div class="mainpage">
-    <div class="mainpage-col">
+    <div class="mainpage-col"> <!--bagian input kalkulator-->
         <h1>Kalkulator BMI</h1>
         <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu?</p>
         <p>Yuk, hitung sekarang di kalkulator ini.</p>
         <div class="mainpage-colsub">
-            <label for="">Jenis Kelamin</label><br>
-            <input type="radio" id="pria" name="kelamin" value="pria">
-            <label for="pria">Pria</label><br>
-            <input type="radio" id="wanita" name="kelamin" value="wanita">
-            <label for="wanita">Wanita</label><br><br>
+            <form id="forminput"> <!--form input jenis kelamin, berat, etc-->
+                <label for="">Jenis Kelamin</label><br>
+                <input type="radio" id="pria" name="inputjeniskelamin" value="pria">
+                <label for="pria">Pria</label><br>
+                <input type="radio" id="wanita" name="inputjeniskelamin" value="wanita">
+                <label for="wanita">Wanita</label><br><br>
+    
+                <label for="">Berat Badan (kg)</label><br> <!--input berat badan-->
+                <input class="inputtext" type="number" id="inputberat">
+    
+                <label for="">Usia (tahun)</label><br> <!--input usia-->
+                <input class="inputtext" type="number" id="inputusia">
+    
+                <label for="">Tinggi Badan (cm)</label><br> <!--input tinggi badan-->
+                <input class="inputtext" type="number" id="inputtinggi"><br><br>
+            </form>
 
-            <label for="">Berat Badan (kg)</label><br>
-            <input class="inputtext" type="text">
+            <button onclick="perhitungan()" class="mainbutton">Hitung BMI</button>
 
-            <label for="">Usia (tahun)</label><br>
-            <input class="inputtext" type="text">
+            <button onclick="resetform()" class="secondarybutton" id="reset">Reset</button>
 
-            <label for="">Tinggi Badan (cm)</label><br>
-            <input class="inputtext" type="text"><br><br>
-
-            <button class="mainbutton">Hitung BMI</button>
-            <button class="secondarybutton">Reset</button>
         </div>
         <h3>Keunggulan Fitur</h3>
         <ol>
@@ -54,17 +60,16 @@
         <p>Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
         <p>Kalkulator ini akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
     </div>
-    <div class="mainpage-col">
+    <div class="mainpage-col"> <!--bagian hasil-->
         <h1>Hasil</h1>
         <div class="mainpage-colsub">
-            <p class="mainpage-hasil">Berat Badan Lebih</p>
-            <p class="mainpage-hasil">0</p>
-            <p class="mainpage-hasil">Anda memiliki berat badan berlebih</p>
+            <p class="mainpage-hasil">Skor BMI:</p>
+            <p class="mainpage-hasil" id="outputhasil" style="font-size: xx-large; font-weight: 500;">0</p> <!--output kelebihan berat badan-->
+            <p class="mainpage-hasil" id="outputstatus">-</p> <!--status hasil penghitungan berat badan-->
         </div>
-        <p>Hasil BMI diantara 23 dan 25.</p>
-        <p>Anda berada dalam kategori <b>overweight atau berat badan berlebih</b>.</p>
-        <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.
-        Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+        <p id="outputrange"></p> <!--hasil BMI diantara ...-->
+        <p>Anda berada dalam kategori <b id="outputkategori">-</b>.</p> <!--status hasil penghitungan berat badan-->
+        <p id="outputsaran"></p>
         <button class="mainbutton">Konsultasi Ahli Gizi Via Aplikasi</button>
         <button class="mainbutton">Registrasi Online Ahli Gizi</button>
         <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
@@ -77,13 +82,13 @@
 </div>
 </section>
 
-<footer>
+<footer> <!--footer-->
     <div class="footer-col">
         <p class="footerfont">&copy; 2024 by Aqila Rhozan Yudisthira</p>
         <p class="footerfont">Contact <br>
             <a class="mail" href="mailto:aqilarhozan@gmail.com">aqilarhozan@gmail.com</a>
         </p>
-        <img class="logo" src="assets\revou logo.png">
+        <a href="https://www.revou.co/"><img class="logo" src="assets\revou logo.png"></a>
     </div>
     <div class="footer-col footer-end">
         <a href="#section1"><img class="footer-icon" src="assets\upward arrow.png"></a>
