@@ -100,7 +100,7 @@ function resetform() {
     document.getElementById('outputrange').textContent = '';                    //  reset range skor
     document.getElementById('outputkategori').textContent = '-';                //  reset kategori
     document.getElementById('outputsaran').textContent = '';                    //  reset saran
-    document.getElementById('outputjeniskelamin').textContent = '-'; 
+    document.getElementById('outputjeniskelamin').textContent = '-';            //  reset jenis kelamin
 }
 
 /* 
@@ -108,5 +108,5 @@ LOGIKA:
 1. js tidak akan melakukan penghitungan ketika form belum diisi seluruhnya yaitu jenis kelamin, berat, usia dan tinggi
 2. ketika form sudah diisi user dapat melakukan penghitungan dengan menekan button submit yang bertuliskan "Hitung BMI"
 3. hasil skor, range skor, status berat badan, kategori berat badan, saran, dan penyakit akan ditampilkan setelah berhasil melakukan penghitungan
-4. button reset menghapus isi form dengan fungsi html, juga meghapus hasil menggunakan fungsi javascript
+4. button reset menghapus isi form dengan fungsi html, juga menghapus hasil menggunakan fungsi javascript
 */
