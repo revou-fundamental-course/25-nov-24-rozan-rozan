@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="ikon" href="assets\revou logo.pngn" type="jenis gambar/ikon">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 
 </head>
@@ -45,25 +45,23 @@
         <div class="mainpage-colsub">
             <form id="forminput"> <!--form input jenis kelamin, berat, etc-->
                 <label for="">Jenis Kelamin</label><br>
-                <input type="radio" id="pria" name="inputjeniskelamin" value="pria">
+                <input type="radio" id="pria" name="inputjeniskelamin" value="pria" required>
                 <label for="pria">Pria</label><br>
-                <input type="radio" id="wanita" name="inputjeniskelamin" value="wanita">
+                <input type="radio" id="wanita" name="inputjeniskelamin" value="wanita" required>
                 <label for="wanita">Wanita</label><br><br>
     
                 <label for="">Berat Badan (kg)</label><br> <!--input berat badan-->
-                <input class="inputtext" type="number" id="inputberat">
+                <input class="inputtext" type="number" id="inputberat" required>
     
                 <label for="">Usia (tahun)</label><br> <!--input usia-->
-                <input class="inputtext" type="number" id="inputusia">
+                <input class="inputtext" type="number" id="inputusia" required>
     
                 <label for="">Tinggi Badan (cm)</label><br> <!--input tinggi badan-->
-                <input class="inputtext" type="number" id="inputtinggi"><br><br>
+                <input class="inputtext" type="number" id="inputtinggi" required><br><br>
+
+                <button type="submit" onclick="perhitungan()" class="mainbutton">Hitung BMI</button>
+                <button type="reset" onclick="resetform()" class="secondarybutton" id="reset">Reset</button>
             </form>
-
-            <button onclick="perhitungan()" class="mainbutton">Hitung BMI</button>
-
-            <button onclick="resetform()" class="secondarybutton" id="reset">Reset</button>
-
         </div>
         <h3>Keunggulan Fitur</h3>
         <ol>
@@ -76,24 +74,21 @@
     </div>
     <div class="mainpage-col"> <!--bagian hasil-->
         <h1>Hasil</h1>
-        <div class="mainpage-colsub">
-            <p class="mainpage-hasil">Skor BMI:</p>
-            <p class="mainpage-hasil" id="outputhasil" style="font-size: xx-large; font-weight: 500;">0</p> <!--output kelebihan berat badan-->
-            <p class="mainpage-hasil" id="outputstatus">-</p> <!--status hasil penghitungan berat badan-->
+        <div class="mainpage-colsub hasil">
+            <div >Skor BMI:</div>
+            <div class="skor" id="outputhasil" style="font-size: xx-large; font-weight: 500;">0</div> <!--output kelebihan berat badan-->
+            <div id="outputstatus">-</div> <!--status hasil penghitungan berat badan-->
+            <div class="jeniskelamin">Jenis kelamin: <span id="outputjeniskelamin">-</span></div>
         </div>
         <p id="outputrange"></p> <!--hasil BMI diantara ...-->
         <p>Anda berada dalam kategori <b id="outputkategori">-</b>.</p> <!--status hasil penghitungan berat badan-->
-        <div class="mainpage-saran">
-            <p id="outputsaran"></p>
-        </div>
+        <p id="outputsaran"></p>
         <button class="mainbutton">Konsultasi Ahli Gizi Via Aplikasi</button>
         <button class="mainbutton">Registrasi Online Ahli Gizi</button>
         <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
         <div class="mainpage-colsub">
-            <div class="mainpage-penyakit">
-                <p id="listpenyakit"></p>
-                <p id="outputpenyakit"></p>
-            </div>
+            <p id="listpenyakit"></p>
+            <p id="outputpenyakit"></p>
             <button class="mainbutton">Konsultasi Dokter Via Aplikasi</button>
             <button class="mainbutton">Registrasi Online Sekarang</button>
         </div>
