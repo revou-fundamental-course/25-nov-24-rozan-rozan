@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="ikon" href="assets\revou logo.pngn" type="jenis gambar/ikon">
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 
 </head>
@@ -45,24 +45,24 @@
         <div class="mainpage-colsub">
             <form id="forminput"> <!--form input jenis kelamin, berat, etc-->
                 <label for="">Jenis Kelamin</label><br>
-                <input type="radio" id="pria" name="inputjeniskelamin" value="pria">
+                <input type="radio" id="pria" name="inputjeniskelamin" value="Pria" required>
                 <label for="pria">Pria</label><br>
-                <input type="radio" id="wanita" name="inputjeniskelamin" value="wanita">
+                <input type="radio" id="wanita" name="inputjeniskelamin" value="Wanita" required>
                 <label for="wanita">Wanita</label><br><br>
     
                 <label for="">Berat Badan (kg)</label><br> <!--input berat badan-->
-                <input class="inputtext" type="number" id="inputberat">
+                <input class="inputtext" type="number" id="inputberat" required>
     
                 <label for="">Usia (tahun)</label><br> <!--input usia-->
-                <input class="inputtext" type="number" id="inputusia">
+                <input class="inputtext" type="number" id="inputusia" required>
     
                 <label for="">Tinggi Badan (cm)</label><br> <!--input tinggi badan-->
-                <input class="inputtext" type="number" id="inputtinggi"><br><br>
+                <input class="inputtext" type="number" id="inputtinggi" required><br><br>
+
+                <button onclick="perhitungan()" type="submit" class="mainbutton">Hitung BMI</button>
+                <button type="reset" onclick="resetform()" class="secondarybutton" id="reset">Reset</button>
+
             </form>
-
-            <button onclick="perhitungan()" class="mainbutton">Hitung BMI</button>
-
-            <button onclick="resetform()" class="secondarybutton" id="reset">Reset</button>
 
         </div>
         <h3>Keunggulan Fitur</h3>
@@ -76,10 +76,11 @@
     </div>
     <div class="mainpage-col"> <!--bagian hasil-->
         <h1>Hasil</h1>
-        <div class="mainpage-colsub">
-            <p class="mainpage-hasil">Skor BMI:</p>
-            <p class="mainpage-hasil" id="outputhasil" style="font-size: xx-large; font-weight: 500;">0</p> <!--output kelebihan berat badan-->
-            <p class="mainpage-hasil" id="outputstatus">-</p> <!--status hasil penghitungan berat badan-->
+        <div class="mainpage-colsub outputhasil">
+            Skor BMI:
+            <div class="skor" id="outputhasil">0</div> <!--output skor BMI-->
+            <div><b id="outputstatus">-</b></div> <!--status berat badan hasil penghitungan berat badan-->
+            <div class="jeniskelamin">Jenis Kelamin: <span id="outputjeniskelamin"></span></div>
         </div>
         <p id="outputrange"></p> <!--hasil BMI diantara ...-->
         <p>Anda berada dalam kategori <b id="outputkategori">-</b>.</p> <!--status hasil penghitungan berat badan-->
