@@ -209,6 +209,8 @@ span:nth-child(8) {
 .skor {
     margin-top: 20px;
     margin-bottom: 20px;
+    font-size: xx-large; 
+    font-weight: 500;
 }
 .jeniskelamin {
     font-size: small;
